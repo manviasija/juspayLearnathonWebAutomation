@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-17T21:39:49 IST" name="Suite" finished-at="2023-06-17T21:44:21 IST" duration-ms="272026">
+    <groups>
+    </groups>
+    <test started-at="2023-06-17T21:39:49 IST" name="Test" finished-at="2023-06-17T21:44:21 IST" duration-ms="272026">
+      <class name="placeOrder.placeOrder">
+        <test-method is-config="true" signature="setup()[pri:0, instance:placeOrder.placeOrder@7e7be63f]" started-at="2023-06-17T21:39:49 IST" name="setup" finished-at="2023-06-17T21:39:51 IST" duration-ms="1746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="launchApp()[pri:1, instance:placeOrder.placeOrder@7e7be63f]" started-at="2023-06-17T21:39:51 IST" name="launchApp" finished-at="2023-06-17T21:39:54 IST" duration-ms="2390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="checkPageLoad()[pri:2, instance:placeOrder.placeOrder@7e7be63f]" started-at="2023-06-17T21:39:54 IST" name="checkPageLoad" description="Checking page Load" finished-at="2023-06-17T21:39:54 IST" depends-on-methods="placeOrder.placeOrder.launchApp" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPageLoad -->
+        <test-method signature="perform_Search()[pri:4, instance:placeOrder.placeOrder@7e7be63f]" started-at="2023-06-17T21:39:54 IST" name="perform_Search" description="Performing product search" finished-at="2023-06-17T21:39:57 IST" depends-on-methods="placeOrder.placeOrder.checkPageLoad" duration-ms="3105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- perform_Search -->
+        <test-method signature="perform_ProductCheckout()[pri:5, instance:placeOrder.placeOrder@7e7be63f]" started-at="2023-06-17T21:39:57 IST" name="perform_ProductCheckout" description="Adding product to cart" finished-at="2023-06-17T21:40:03 IST" depends-on-methods="placeOrder.placeOrder.perform_Search" duration-ms="6295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- perform_ProductCheckout -->
+        <test-method signature="perform_Login()[pri:6, instance:placeOrder.placeOrder@7e7be63f]" started-at="2023-06-17T21:40:03 IST" name="perform_Login" finished-at="2023-06-17T21:40:24 IST" depends-on-methods="placeOrder.placeOrder.perform_ProductCheckout" duration-ms="20855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- perform_Login -->
+        <test-method signature="perform_payment()[pri:7, instance:placeOrder.placeOrder@7e7be63f]" started-at="2023-06-17T21:40:24 IST" name="perform_payment" finished-at="2023-06-17T21:44:21 IST" depends-on-methods="placeOrder.placeOrder.perform_Login" duration-ms="237056" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Payment failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Payment failed
+at org.testng.Assert.fail(Assert.java:99)
+at placeOrder.placeOrder.perform_payment(placeOrder.java:82)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- perform_payment -->
+        <test-method is-config="true" signature="AfterClassMethod()[pri:0, instance:placeOrder.placeOrder@7e7be63f]" started-at="2023-06-17T21:44:21 IST" name="AfterClassMethod" finished-at="2023-06-17T21:44:21 IST" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClassMethod -->
+      </class> <!-- placeOrder.placeOrder -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
